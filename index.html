@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, inital-scale=1.0">
+        <title>Used Car Finder!</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="page-title">Looking for a Used Car?</h1>
+            <h2 id="page-subtitle">Use the filters to find your next purchase!</h2>
+            <img id="logo" src="/images/carlogo.png">
+        </header>
+
+        <!--Setting up the filter checkboxes-->
+    <form>
+
+        <section id="year-checkbox">
+            <!--Year Checkboxes-->
+            <label class="form-label">Year:</label>
+
+            <input type="checkbox" id="year2013" class="cb" data-max="2013">
+            <label for="year2013">2013 and older</label>
+
+            <input type="checkbox" id="year2014to2016" class="cb" data-min="2014" data-max="2016">
+            <label for="year2014to2016">2014 - 2016</label>
+
+            <input type="checkbox" id="year2017to2019" class="cb" data-min="2017" data-max="2019">
+            <label for="year2017to2019">2017 - 2019</label>
+
+            <input type="checkbox" id="year2020to2023" class="cb" data-min="2020" data-max="2023">
+            <label for="year2020to2023">2020 - 2023</label>
+
+            <input type="checkbox" id="year2024Plus" class="cb" data-min="2024">
+            <label for="year2024Plus">2024 and newer</label>
+        
+        </section>
+        
+        <section id="car-make-checkbox">
+            <!--Car Make Checkbox-->
+            <label class="form-label">Make:</label>
+
+            <!--Toyota-->
+            <input type="checkbox" id="toyota" class="cb" value="toyota">
+            <label for="toyota">Toyota</label>
+
+            <!--Honda-->
+            <input type="checkbox" id="honda" class="cb" value="honda">
+            <label for="honda">Honda</label>
+
+            <!--Ford-->
+            <input type="checkbox" id="ford" class="cb" value="ford">
+            <label for="ford">Ford</label>
+
+            <!--Nissan-->
+            <input type="checkbox" id="nissan" class="cb" value="nissan">
+            <label for="nissan">Nissan</label>
+
+            <!--Chevy-->
+            <input type="checkbox" id="chevy" class="cb" value="chevrolet">
+            <label for="chevy">Chevy</label>
+
+            <!--Volkswagen-->
+            <input type="checkbox" id="volkswagen" class="cb" value="volkswagen">
+            <label for="volkswagen">Volkswagen</label>
+
+            <!--Hyundai-->
+            <input type="checkbox" id="hyundai" class="cb" value="hyundai">
+            <label for="hyundai">Hyundai</label>
+
+            <!--Subaru-->
+            <input type="checkbox" id="subaru" class="cb" value="subaru">
+            <label for="subaru">Subaru</label>
+
+            <!--Mazda-->
+            <input type="checkbox" id="mazda" class="cb" value="mazda">
+            <label for="mazda">Mazda</label>
+
+            <!--Kia-->
+            <input type="checkbox" id="kia" class="cb" value="kia">
+            <label for="kia">Kia</label>
+
+            <!--Dodge-->
+            <input type="checkbox" id="dodge" class="cb" value="dodge">
+            <label for="dodge">Dodge</label>
+
+            <!--Cadillac-->
+            <input type="checkbox" id="cadillac" class="cb" value="cadillac">
+            <label for="cadillac">Cadillac</label>
+
+            <!--Jaguar-->
+            <input type="checkbox" id="jaguar" class="cb" value="jaguar">
+            <label for="jaguar">Jaguar</label>
+
+            <!--Tesla-->
+            <input type="checkbox" id="tesla" class="cb" value="tesla">
+            <label for="tesla">Tesla</label>
+
+            <!--Porsche-->
+            <input type="checkbox" id="porsche" class="cb" value="porsche">
+            <label for="porsche">Porsche</label>
+
+            <!--Lexus-->
+            <input type="checkbox" id="lexus" class="cb" value="lexus">
+            <label for="lexus">Lexus</label>
+
+            <!--BMW-->
+            <input type="checkbox" id="bmw" class="cb"value="bmw">
+            <label for="bmw">BMW</label>
+        </section>
+
+        <section id="mileage-checkbox">
+            <!--Mileage Checkbox-->
+            <label class="form-label">Mileage:</label>
+
+            <input type="checkbox" id="mile20000" class="cb" data-max="20000">
+            <label for="mile20000">20,000 miles and below</label>
+
+            <input type="checkbox" id="mile20000to40000" class="cb" data-min="20000" data-max="40000">
+            <label for="mile20000to40000">20,000 - 40,000 miles</label>
+
+            <input type="checkbox" id="mile40000to60000" class="cb" data-min="40000" data-max="60000">
+            <label for="mile40000to60000">40,000 - 60,000 miles</label>
+
+            <input type="checkbox" id="mile60000Plus" class="cb" data-min="60000">
+            <label for="mile60000Plus">60,000 miles and above</label>
+
+        </section>
+
+        <section id="price-checkbox">
+            <!--Price Checkbox-->
+            <label class="form-label">Price:</label>
+
+            <input type="checkbox" id="price15000" class="cb" data-max="15000">
+            <label for="price15000">$15,000 and below</label>
+
+            <input type="checkbox" id="price15000to25000" class="cb" data-min="15000" data-max="25000">
+            <label for="price15000to25000">$15,000 - $25,000</label>
+
+            <input type="checkbox" id="price25000to40000" class="cb" data-min="25000" data-max="40000">
+            <label for="price25000to40000">$25,000 - $40,000</label>
+
+            <input type="checkbox" id="price40000Plus" class="cb" data-min="40000">
+            <label for="price40000Plus">$40,000 and above</label>
+        </section>
+
+        <section id="color-checkbox">
+            <!--Color Checkbox-->
+            <label class="form-label">Color:</label>
+
+            <input type="checkbox" id="silver" class="cb" value="silver">
+            <label for="silver">Silver</label>
+
+            <input type="checkbox" id="white" class="cb" value="white">
+            <label for="white">White</label>
+
+            <input type="checkbox" id="black"  class="cb"value="black">
+            <label for="black">Black</label>
+
+            <input type="checkbox" id="blue" class="cb" value="blue">
+            <label for="blue">Blue</label>
+
+            <input type="checkbox" id="red" class="cb" value="red">
+            <label for="red">Red</label>
+
+            <input type="checkbox" id="gray"  class="cb"value="gray">
+            <label for="gray">Gray</label>
+
+            <input type="checkbox" id="green"  class="cb"value="green">
+            <label for="green">Green</label>
+        </section>
+
+    </form>
+
+     <!--Reset Button-->
+    <div id="resetFilterButton">
+        <button onclick="resetFilters()" type="button" id="resetButton">Reset Filters</button>
+    </div>
+
+        <div class="wrapper">
+            <!--Car Cards-->
+            <!--each card has data attributes-->
+            <section class="card" data-make="toyota" data-color="silver" data-year="2018" data-mileage="18000" data-price="18000">
+                <img src="/images/toyota-camry-18.png" alt="Toyota Camry 2018" style="width:100%">
+                <h1>Toyota Camry</h1>
+                <p class="price">$18,000</p>
+                <p>2018 | 18,000 miles | Color: Silver</p>
+                <p>25 mpg city | 35 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="honda" data-color="white" data-year="2016" data-mileage="45000" data-price="45000">
+                <img src="/images/honda-civic-16.jpg" alt="Honda Civic 2016" style="width:100%">
+                <h1>Honda Civic</h1>
+                <p class="price">$45,000</p>
+                <p>2016 | 45,000 miles | Color: White</p>
+                <p>30 mpg city | 40 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="ford" data-color="black" data-year="2017" data-mileage="35000" data-price="35000">
+                <img src="/images/ford-fusion-17.jpg" alt="Ford Fusion 2017" style="width:100%">
+                <h1>Ford Fusion</h1>
+                <p class="price">$35,000</p>
+                <p>2017 | 35,000 miles | Color: Black </p>
+                <p>28 mpg city | 38 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="nissan" data-color="blue" data-year="2019" data-mileage="25000" data-price="17000">
+                <img src="/images/nissan-altima-19.jpg" alt="Nissan Altima 2019" style="width:100%">
+                <h1>Nissan Altima</h1>
+                <p class="price">$17,000</p>
+                <p>2019 | 25,000 miles | Color: Blue </p>
+                <p>27 mpg city | 36 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="chevrolet" data-color="red" data-year="2015" data-mileage="50000" data-price="12000">
+                <img src="/images/chevy-malibu-15.jpg" alt="Chevy Malibu 2015" style="width:100%">
+                <h1>Chevrolet Malibu</h1>
+                <p class="price">$12,000</p>
+                <p>2015 | 50,000 miles | Color: Red </p>
+                <p>25 mpg city | 37 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="volkswagen" data-color="gray" data-year="2016" data-mileage="40000" data-price="15000">
+                <img src="/images/volks-passat-16.jpeg" alt="Volkswagen Passat 2016" style="width:100%">
+                <h1>Volkswagen Passat</h1>
+                <p class="price">$15,000</p>
+                <p>2016 | 40,000 miles | Color: Gray </p>
+                <p>29 mpg city | 40 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="hyundai" data-color="silver" data-year="2020" data-mileage="22000" data-price="16000">
+                <img src="/images/hyundai-elantra-20.png" alt="Hyundai Elantra 2020" style="width:100%">
+                <h1>Hyundai Elantra</h1>
+                <p class="price">$16,000</p>
+                <p>2020 | 22,000 miles | Color: Silver </p>
+                <p>30 mpg city | 41 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="subaru" data-color="green" data-year="2014" data-mileage="60000" data-price="14000">
+                <img src="/images/subaru-outback-14.jpg" alt="Subaru Outback 2014" style="width:100%">
+                <h1>Subaru Outback</h1>
+                <p class="price">$14,000</p>
+                <p>2014 | 60,000 miles | Color: Green </p>
+                <p>22 mpg city | 30 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="mazda" data-color="blue" data-year="2017" data-mileage="32000" data-price="19000">
+                <img src="/images/mazda-cx5-17.jpg" alt="Mazda CX5 2017" style="width:100%">
+                <h1>Mazda CX5</h1>
+                <p class="price">$19,000</p>
+                <p>2017 | 32,000 miles | Color: Blue </p>
+                <p>24 mpg city | 31 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="kia" data-color="white" data-year="2018" data-mileage="28000" data-price="17000">
+                <img src="/images/kia-sorrento-18.jpg" alt="Kia Sorrento 2018" style="width:100%">
+                <h1>Kia Sorrento</h1>
+                <p class="price">$17,000</p>
+                <p>2018 | 28,000 miles | Color: White </p>
+                <p>22 mpg city | 29 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="dodge" data-color="black" data-year="2015" data-mileage="30000" data-price="24000">
+                <img src="/images/dodge-challenger-15.jpg" alt="Dodge Challenger 2015" style="width:100%">
+                <h1>Dodge Challenger</h1>
+                <p class="price">$24,000</p>
+                <p>2015 | 30,000 miles | Color: Black </p>
+                <p>19 mpg city | 30 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="cadillac" data-color="red" data-year="2017" data-mileage="28000" data-price="32000">
+                <img src="/images/cadillac-xt5-17.jpg" alt="Cadillac XT5 2017" style="width:100%">
+                <h1>Cadillac XT5</h1>
+                <p class="price">$32,000</p>
+                <p>2017 | 28,000 miles | Color: Red </p>
+                <p>19 mpg city | 27 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="jaguar" data-color="blue" data-year="2018" data-mileage="26000" data-price="38000">
+                <img src="/images/jaguar-fpace-18.jpg" alt="Jaguar F-PACE 2018" style="width:100%">
+                <h1>Jaguar F-PACE</h1>
+                <p class="price">$38,000</p>
+                <p>2018 | 26,000 miles | Color: Blue </p>
+                <p>18 mpg city | 23 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="tesla" data-color="black" data-year="2019" data-mileage="18000" data-price="55000">
+                <img src="/images/tesla-models-19.jpg" alt="Tesla Model S 2019" style="width:100%">
+                <h1>Tesla Model S</h1>
+                <p class="price">$55,000</p>
+                <p>2019 | 18,000 miles | Color: Black </p>
+                <p>Electric (370 miles per charge)</p>
+            </section>
+
+            <section class="card" data-make="porsche" data-color="white" data-year="2020" data-mileage="22000" data-price="68000">
+                <img src="/images/porsche-cayenne-20.jpg" alt="Porsche Cayenne 2020" style="width:100%">
+                <h1>Porsche Cayenne</h1>
+                <p class="price">$68,000</p>
+                <p>2020 | 22,000 miles | Color: White </p>
+                <p>23 mpg city | 34 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="lexus" data-color="white" data-year="2017" data-mileage="29000" data-price="26000">
+                <img src="/images/lexus-es-17.jpg" alt="Lexus ES" style="width:100%">
+                <h1>Lexus ES</h1>
+                <p class="price">$26,000</p>
+                <p>2017 | 29,000 miles | Color: White </p>
+                <p>21 mpg city | 30 mpg highway</p>
+            </section>
+
+            <section class="card" data-make="bmw" data-color="black" data-year="2016" data-mileage="32000" data-price="27000">
+                <img src="/images/bmw-sseries-16.jpg" alt="BMW S Series 2016" style="width:100%">
+                <h1>BMW S Series</h1>
+                <p class="price">$27,000</p>
+                <p>2016 | 32,000 miles | Color: Black </p>
+                <p>23 mpg city | 34 mpg highway</p>
+            </section>
+
+            <!--no results message-->
+            <div id="no-results-message" style="display: none;">
+                <p>No results found. Please adjust filters and try again.</p>
+            </div>
+    </body>
+</html>

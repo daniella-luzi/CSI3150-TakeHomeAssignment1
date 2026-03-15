@@ -1,0 +1,72 @@
+/*setting the style of the car cards from https://www.w3schools.com/howto/howto_css_product_card.asp*/
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  background-color: white;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+/*styling everything else*/
+
+body{
+  background-color: #cce6ff;
+}
+
+#logo{
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 250px;
+}
+
+h1, h2, p, label {
+  font-family: arial;
+  color: #000033;
+}
+
+#page-title{
+  font-size: 65px;
+  text-align: center;
+  color: #000033;
+}
+
+#page-subtitle{
+  font-size: 25px;
+  text-align: center;
+  color: #000033;
+}
+
+.form-label{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#year-checkbox, #car-make-checkbox, #mileage-checkbox, #price-checkbox, #color-checkbox{
+  margin: 20px;
+}
+
+#resetButton{
+  margin-top: 5px;
+  margin-left: 20px;
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: white;
+  color: #000033;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
